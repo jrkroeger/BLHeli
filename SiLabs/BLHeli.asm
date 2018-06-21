@@ -4222,7 +4222,7 @@ beep_anfet_off:
 	jnb	ACC.0, beep_cnfet_off
 	CnFET_off			; CnFET off
 beep_cnfet_off:
-	mov	A, #150		; 25µs off
+	mov	A, #150		; 25ï¿½s off
 	djnz	ACC, $		
 	djnz	Temp2, beep_onoff
 	; Copy variable
@@ -4567,13 +4567,13 @@ governor_activate:
 	mov	Temp3, Comm_Period4x_L		; Load comm period
 	mov	Temp4, Comm_Period4x_H		
 	; Set speed range 
-	clr	C
-	mov	A, Temp4
-	rrc	A
-	mov	Temp4, A
-	mov	A, Temp3
-	rrc	A
-	mov	Temp3, A  				; 200k eRPM range here
+	;clr	C
+	;mov	A, Temp4
+	;rrc	A
+	;mov	Temp4, A
+	;mov	A, Temp3
+	;rrc	A
+	;mov	Temp3, A  				; 200k eRPM range here
 	; Check range
 	mov	A, Temp5
 	dec	A
